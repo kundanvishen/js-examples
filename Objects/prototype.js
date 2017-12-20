@@ -5,10 +5,9 @@
  * as a function constructor.
  */
 
- function Person(firstname, lastname){
-	 console.log(this);
-	 this.firstname = firstname;
-	 this.lastname = lastname;
+ function Person(firstname,	lastname){
+	this.firstname	=	firstname;
+	this.lastname	=	lastname;
  }
 
  /**
@@ -27,16 +26,16 @@ Person.prototype.getFullName = function(){
  * access any one of their methods and properties.
  */
 
-var john = Person('John', 'Doe');
-console.log(john.getFullName());
+var john = new Person('John', 'Doe');
+// console.log(john.getFullName());
 
-var jane = Person('Jane', 'Doe');
-console.log(jane.getFullName());
+var jane = new Person('Jane', 'Doe');
+// console.log(jane.getFullName());
 
 Person.prototype.getFormalFullName = function(){
 	return this.lastname + ', ' + this.firstname;
 }
-console.log(john.getFormalFullName());
+// console.log(john.getFormalFullName());
 
 /**
  * ========
