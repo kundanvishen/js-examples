@@ -3,6 +3,7 @@
  * 
  * 'Syntactic Sugar' : A different way to type something that
  * doesn't change how it works under the hood.
+ * Just a different way to type your code.
  */
 
 
@@ -10,12 +11,12 @@
  * Example of a class (function constructor)
  */
 class Person {
-	constructor(firstname, lastname){
+	constructor(firstname, lastname) {
 		this.firstname = firstname;
 		this.lastname = lastname;
 	}
 
-	greet(){
+	greet() {
 		return 'Hi ' + this.firstname;
 	}
 }
@@ -28,13 +29,13 @@ console.log(john.greet());
  * Setting up prototype (extending)
  */
 
- class InformalPerson extends Person {
-	 constructor(firstname, lastname) {
-		 super(firstname, lastname);
-	 }
-	 greet() {
-		 return 'Yo ' + this.firstname;
-	 }
- }
- var jane = new InformalPerson('Jane', 'Doe');
- console.log(jane.greet());
+class InformalPerson extends Person {
+	constructor(firstname, lastname) {
+		super(firstname, lastname);
+	}
+	greet() {
+		return 'Yo ' + this.firstname;
+	}
+}
+var jane = new InformalPerson('Jane', 'Doe');
+console.log(jane.greet());
